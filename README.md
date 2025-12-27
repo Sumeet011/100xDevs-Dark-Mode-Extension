@@ -98,10 +98,6 @@ Feel free to fork this repository and make improvements! Some ideas:
 
 Free to use and modify for personal use.
 
-## Credits
-
-Created for the 100xDevs community by GitHub Copilot.
-
 ---
 
 **Note**: This extension only works on harkirat.classx.co.in. It doesn't collect any data or require any special permissions beyond accessing the website.
