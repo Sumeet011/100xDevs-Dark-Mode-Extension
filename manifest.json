@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "100xDevs Dark Mode",
+  "version": "1.0.0",
+  "description": "Applies a beautiful dark mode to harkirat.classx.co.in website",
+  "permissions": [],
+  "host_permissions": [
+    "https://harkirat.classx.co.in/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://harkirat.classx.co.in/*"],
+      "css": ["dark-mode.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

@@ -1,0 +1,536 @@
+/* Root-level dark mode theme variables */
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #1c2128;
+  --bg-card: #21262d;
+  --bg-hover: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  --border-color: #30363d;
+  --accent-blue: #58a6ff;
+  --accent-purple: #bc8cff;
+  --accent-green: #3fb950;
+  --accent-orange: #ff9052;
+  --accent-yellow: #f0c74b;
+}
+
+/* Base body styling */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* All containers and divs */
+div, section, article, aside, nav, header, footer, main {
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+/* Text elements */
+p, span, li, label, td, th, a, h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Headings with more emphasis */
+h1, h2, h3 {
+  color: var(--accent-blue) !important;
+  font-weight: 700 !important;
+}
+
+h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Links */
+a {
+  color: var(--accent-blue) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--accent-purple) !important;
+  text-decoration: underline !important;
+}
+
+/* Buttons */
+button {
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+button:hover {
+  background-color: var(--bg-hover) !important;
+  border-color: var(--accent-blue) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Primary action buttons */
+button[class*="primary"],
+button[class*="btn-primary"],
+a[class*="primary"] {
+  background: linear-gradient(135deg, #1f6feb 0%, #58a6ff 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+button[class*="primary"]:hover,
+button[class*="btn-primary"]:hover,
+a[class*="primary"]:hover {
+  background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%) !important;
+  box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3) !important;
+}
+
+/* Cards and containers */
+[class*="card"],
+[class*="container"],
+[class*="box"],
+[class*="panel"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Course cards */
+[class*="course"],
+[class*="cohort"],
+[class*="bootcamp"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="course"]:hover,
+[class*="cohort"]:hover,
+[class*="bootcamp"]:hover {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--accent-blue) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.2) !important;
+}
+
+/* Price tags */
+[class*="price"],
+[class*="cost"],
+[class*="amount"] {
+  color: var(--accent-green) !important;
+  font-weight: 600 !important;
+}
+
+/* Input fields */
+input, textarea, select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-blue) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1) !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Navigation bar */
+nav {
+  background-color: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Header */
+header {
+  background-color: transparent !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-secondary) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+/* Images - reduce brightness slightly */
+img {
+  opacity: 0.9 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+img:hover {
+  opacity: 1 !important;
+}
+
+/* Video containers */
+[class*="video"],
+[class*="youtube"],
+iframe {
+  border-radius: 12px !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+/* Tables */
+table {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-collapse: collapse !important;
+}
+
+th {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent-blue) !important;
+  font-weight: 600 !important;
+  padding: 12px !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+td {
+  padding: 12px !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+tr:hover {
+  background-color: var(--bg-hover) !important;
+}
+
+/* Code blocks */
+code, pre {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent-orange) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+pre {
+  padding: 16px !important;
+  overflow-x: auto !important;
+}
+
+/* Badges and tags */
+[class*="badge"],
+[class*="tag"],
+[class*="label"] {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent-purple) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  padding: 4px 12px !important;
+  font-size: 0.875rem !important;
+}
+
+/* Progress bars */
+[class*="progress"] {
+  background-color: var(--bg-tertiary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+[class*="progress-bar"],
+[class*="progress"] > div {
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)) !important;
+}
+
+/* Modal/Dialog */
+[class*="modal"],
+[class*="dialog"],
+[class*="popup"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Overlay/Backdrop */
+[class*="overlay"],
+[class*="backdrop"] {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Lists */
+ul, ol {
+  color: var(--text-primary) !important;
+}
+
+li::marker {
+  color: var(--accent-blue) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-hover) !important;
+  border-radius: 6px !important;
+  border: 2px solid var(--bg-secondary) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color) !important;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(88, 166, 255, 0.3) !important;
+  color: var(--text-primary) !important;
+}
+
+/* FAQ sections */
+[class*="faq"],
+[class*="accordion"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  margin: 8px 0 !important;
+}
+
+[class*="faq"]:hover,
+[class*="accordion"]:hover {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Stats and numbers */
+[class*="stat"],
+[class*="metric"],
+[class*="count"] {
+  color: var(--accent-green) !important;
+  font-weight: 700 !important;
+}
+
+/* Feature sections */
+[class*="feature"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  transition: all 0.3s ease !important;
+}
+
+[class*="feature"]:hover {
+  background-color: var(--bg-tertiary) !important;
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.15) !important;
+}
+
+/* Hero section */
+[class*="hero"] {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
+}
+
+/* Community images */
+[class*="community"] img {
+  border: 2px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Forms */
+form {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+}
+
+/* Alert/notification */
+[class*="alert"],
+[class*="notification"],
+[class*="toast"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  color: var(--text-primary) !important;
+}
+
+/* Success state */
+[class*="success"] {
+  border-color: var(--accent-green) !important;
+  background-color: rgba(63, 185, 80, 0.1) !important;
+}
+
+/* Error state */
+[class*="error"],
+[class*="danger"] {
+  border-color: #f85149 !important;
+  background-color: rgba(248, 81, 73, 0.1) !important;
+}
+
+/* Warning state */
+[class*="warning"] {
+  border-color: var(--accent-yellow) !important;
+  background-color: rgba(240, 199, 75, 0.1) !important;
+}
+
+/* Dropdown menus */
+[class*="dropdown"],
+[class*="menu"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[class*="dropdown-item"],
+[class*="menu-item"] {
+  color: var(--text-primary) !important;
+}
+
+[class*="dropdown-item"]:hover,
+[class*="menu-item"]:hover {
+  background-color: var(--bg-hover) !important;
+}
+
+/* Avatars */
+[class*="avatar"] {
+  border: 2px solid var(--border-color) !important;
+  border-radius: 50% !important;
+}
+
+/* SVG icons */
+svg {
+  fill: currentColor !important;
+  color: var(--text-primary) !important;
+}
+
+/* Testimonials */
+[class*="testimonial"],
+[class*="review"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+}
+
+/* Timeline */
+[class*="timeline"] {
+  border-left: 2px solid var(--border-color) !important;
+}
+
+[class*="timeline-item"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+}
+
+/* Loading states */
+[class*="loading"],
+[class*="skeleton"] {
+  background: linear-gradient(
+    90deg,
+    var(--bg-secondary) 0%,
+    var(--bg-tertiary) 50%,
+    var(--bg-secondary) 100%
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: loading 1.5s ease-in-out infinite !important;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Podcast section */
+[class*="podcast"] {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+/* YouTube thumbnails */
+img[src*="youtube"],
+img[src*="hqdefault"] {
+  border: 2px solid var(--border-color) !important;
+  border-radius: 8px !important;
+}
+
+/* CTA sections */
+[class*="cta"],
+[class*="call-to-action"] {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%) !important;
+  border: 2px solid var(--accent-blue) !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+}
+
+/* Grid layouts */
+[class*="grid"] {
+  gap: 20px !important;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+/* Ensure proper contrast for accessibility */
+strong, b {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+}
+
+em, i {
+  color: var(--text-secondary) !important;
+}
+
+/* Dividers */
+hr {
+  border-color: var(--border-color) !important;
+  opacity: 1 !important;
+}
+
+/* Chip/pill elements */
+[class*="chip"],
+[class*="pill"] {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--accent-purple) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+}
+
+/* Tab navigation */
+[class*="tab"] {
+  background-color: transparent !important;
+  color: var(--text-secondary) !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+[class*="tab"][class*="active"],
+[class*="tab"]:hover {
+  color: var(--accent-blue) !important;
+  border-bottom-color: var(--accent-blue) !important;
+}
+
+/* Tooltip */
+[class*="tooltip"] {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
